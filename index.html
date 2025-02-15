@@ -6,54 +6,69 @@
     <title>AFB883</title>
     <link rel="icon" href="AFB883BG@2x.png" type="image/png" />
 
-    <!-- Bootstrap 5 CDN -->
+    <!-- Bootstrap 5 -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background: url("Screenshot_285.png") no-repeat center center/cover;
+      /* Full-Screen Background */
+      .hero {
+        padding-bottom: 24vh; /* Fine-tune the height */
         height: 100vh;
+        background: url("web4.jpg") no-repeat center center/cover;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        text-align: center;
+        color: white;
       }
 
       /* Animated Button */
       .btn-custom img {
-        width: 200px; /* Default button size */
+        width: 200px;
         height: auto;
         transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
         animation: pulse 1.5s infinite ease-in-out alternate;
       }
 
-      /* Hover Effect (Enlarges + Smooth Transition) */
+      /* Hover Effect */
       .btn-custom:hover img {
-        transform: scale(1.2); /* Less aggressive scaling */
+        transform: scale(1.2);
       }
 
-      /* Keyframe Animation (Smooth Pulse) */
+      /* Pulse Animation */
       @keyframes pulse {
         0% {
           transform: scale(1);
         }
         50% {
-          transform: scale(
-            1.08
-          ); /* Slightly larger for smooth breathing effect */
+          transform: scale(1.08);
         }
         100% {
           transform: scale(1);
         }
       }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .btn-custom img {
+          width: 200px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .btn-custom img {
+          width: 180px;
+          height: auto;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container d-flex justify-content-center align-items-center">
+    <!-- Hero Section (Full Screen) -->
+    <section class="hero">
       <a
         href="https://afb883.asia/?rc=ADSHK883"
         target="_blank"
@@ -61,9 +76,9 @@
       >
         <img src="button.png" alt="Join Game" />
       </a>
-    </div>
+    </section>
 
-    <!-- Bootstrap JavaScript (Optional) -->
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
